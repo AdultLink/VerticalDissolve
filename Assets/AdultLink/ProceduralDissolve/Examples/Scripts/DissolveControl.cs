@@ -7,6 +7,7 @@ public class DissolveControl : MonoBehaviour {
 	public float minValue;
 	public float maxValue;
 	private float valueRange;
+	public bool autoUpdate = false;
 	public Material mat;
 	[Range(0f, 1f)]
 	public float fillPercentage;
@@ -17,7 +18,9 @@ public class DissolveControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		setFill(fillPercentage);
+		if (autoUpdate) {
+			setFill(fillPercentage);
+		}
 	}
 
 	private void setFill(float _fillPercentage) {
