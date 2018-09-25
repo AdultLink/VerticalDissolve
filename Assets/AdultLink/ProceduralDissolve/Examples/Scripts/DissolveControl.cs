@@ -23,7 +23,8 @@ public class DissolveControl : MonoBehaviour {
 		}
 	}
 
-	private void setFill(float _fillPercentage) {
+	public void setFill(float _fillPercentage) {
+		fillPercentage = Mathf.Clamp(fillPercentage, 0f, 1f);
 		mat.SetFloat("_Fillpercentage", minValue + valueRange * _fillPercentage);
 	}
 }

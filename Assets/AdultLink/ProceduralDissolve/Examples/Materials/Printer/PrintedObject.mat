@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Printer
+  m_Name: PrintedObject
   m_Shader: {fileID: 4800000, guid: 5b6a9ce32c9e7394294524118268c25c, type: 3}
   m_ShaderKeywords: _EMISSION _LAYERNOISE_ON
   m_LightmapFlags: 0
@@ -89,7 +89,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _FillPercentage: 0.77
-    - _Fillpercentage: 0.57
+    - _Fillpercentage: 1.5
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -116,17 +116,17 @@ Material:
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _Basecolor: {r: 0.9632353, g: 0.55859834, b: 0.19123055, a: 1}
+    - _Basecolor: {r: 0.19123049, g: 0.7396201, b: 0.9632353, a: 1}
     - _Basetexspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Basetextiling: {r: 1, g: 1, b: 0, a: 0}
-    - _Bordercolor: {r: 1.65, g: 0.8741989, b: 0.1698529, a: 1}
+    - _Bordercolor: {r: 0.1698529, g: 1.098773, b: 1.65, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Direction: {r: 0, g: 1, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Fillcolor: {r: 0.35849994, g: 0.11125862, b: 0, a: 1}
     - _Foamtexspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Foamtextiling: {r: 1, g: 1, b: 0, a: 0}
-    - _Fresnelcolor: {r: 0.64705884, g: 1, b: 1, a: 1}
+    - _Fresnelcolor: {r: 0.64705884, g: 0.9123732, b: 1, a: 1}
     - _Noisecolor: {r: 0.15045653, g: 0, b: 0.9485294, a: 1}
     - _Noisespeed: {r: 0, g: -0.02, b: 0, a: 0}
     - _Noisetexspeed: {r: 0, g: 0, b: 0, a: 0}
