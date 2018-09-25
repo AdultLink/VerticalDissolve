@@ -20,15 +20,20 @@ public class PrinterController : MonoBehaviour {
 	public float waitTimeAfterErasing;
 	private float printSpeed;
 	private float eraseSpeed;
-	public float movingFrameMinimum;
-	public float movingFrameMaximum;
+	public Transform targetMax;
+	public Transform targetMin;
 	private float timePrintStarted = 0f;
 	private float progress = 0f;
 	private PrintingStatus printingStatus = PrintingStatus.waitingAfterErasing;
 	private float timeWaitStarted = 0f;
 	private float timeErasingStarted = 0f;
+	private Vector3 movementVector;
+	private float movementRangeMag;
 	void Start () {
-		Debug.Log("Printspeed: " + printSpeed);
+		movementVector = targetMax.position - targetMin.position;
+		movementRangeMag = movementVector.magnitude;
+		movingFrame.position = targetMin.position;
+		printDissolveControl.setFill(progress);
 	}
 	
 	// Update is called once per frame
@@ -36,10 +41,10 @@ public class PrinterController : MonoBehaviour {
 		switch (printingStatus){
 			case PrintingStatus.printing:
 				if (Time.time - timePrintStarted < printTime) {
-					printSpeed = (movingFrameMaximum - movingFrameMinimum) * (Time.deltaTime / printTime);
+					printSpeed = movementRangeMag * (Time.deltaTime / printTime);
 					progress += printSpeed;
 					progress = Mathf.Clamp(progress, 0f, 1f);
-					movingFrame.Translate(Vector3.up * (progress * (movingFrameMaximum - movingFrameMinimum) - movingFrame.position.y));
+					movingFrame.position = movementVector * progress + targetMin.position;
 					printDissolveControl.setFill(progress);
 				}
 				else {
@@ -55,10 +60,10 @@ public class PrinterController : MonoBehaviour {
 				break;
 			case PrintingStatus.erasing:
 				if (Time.time - timeErasingStarted < eraseTime) {
-					eraseSpeed = (movingFrameMaximum - movingFrameMinimum) * (Time.deltaTime / eraseTime);
+					eraseSpeed = movementRangeMag * (Time.deltaTime / eraseTime);
 					progress -= eraseSpeed;
 					progress = Mathf.Clamp(progress, 0f, 1f);
-					movingFrame.Translate(Vector3.up * (progress * (movingFrameMaximum - movingFrameMinimum) - movingFrame.position.y));
+					movingFrame.position = movementVector * progress + targetMin.position;
 					printDissolveControl.setFill(progress);
 				}
 				else {
