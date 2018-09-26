@@ -17,7 +17,6 @@ public class PrinterController : MonoBehaviour {
 	public Transform targetMin;
 	private float timePrintStarted = 0f;
 	private float progress = 0f;
-	private float timeWaitStarted = 0f;
 	private float timeErasingStarted = 0f;
 	private Vector3 movementVector;
 	private float movementRangeMag;
