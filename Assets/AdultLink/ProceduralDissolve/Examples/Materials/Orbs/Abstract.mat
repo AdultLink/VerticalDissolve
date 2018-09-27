@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Monkey1
+  m_Name: Abstract
   m_Shader: {fileID: 4800000, guid: 5b6a9ce32c9e7394294524118268c25c, type: 3}
   m_ShaderKeywords: _EMISSION _LAYERNOISE_ON
   m_LightmapFlags: 0
@@ -83,15 +83,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Borderwidth: 0.58
+    - _Borderwidth: 2.4
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _Desaturation: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Enablerimlight: 1
+    - _Enablerimlight: 0
     - _FillPercentage: 0.77
-    - _Fillpercentage: -0.31175327
+    - _Fillpercentage: 0.55
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -100,7 +100,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _Noiseamount: 12.06
-    - _Noisescale: 0.8
+    - _Noisescale: 8.7
     - _OcclusionStrength: 1
     - _Opacity: 0
     - _Parallax: 0.02
@@ -111,32 +111,32 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _Wave1amplitude: 0.069
-    - _Wave1frequency: 25.1
+    - _Wave1amplitude: 0
+    - _Wave1frequency: 4.1
     - _Wave1offset: 0
-    - _Wave2Frequency: 11.9
-    - _Wave2amplitude: 0.075
+    - _Wave2Frequency: 10.5
+    - _Wave2amplitude: 0.387
     - _Wave2offset: 0
     - _Weirdnoise: 0
     - _Worldcoordinates: 0
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _Basecolor: {r: 0.9411765, g: 0.4975063, b: 0.366782, a: 1}
+    - _Basecolor: {r: 0.15686275, g: 0.44705883, b: 0.9254902, a: 1}
     - _Basetexspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Basetextiling: {r: 1, g: 1, b: 0, a: 0}
-    - _Bordercolor: {r: 1.65, g: 0.8741987, b: 0.1698529, a: 1}
+    - _Bordercolor: {r: 0.7937119, g: 1.3, b: 0.38235286, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Direction: {r: 0, g: 1, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Fillcolor: {r: 0, g: 0.28432748, b: 0.35849997, a: 1}
-    - _Foamcolor: {r: 1, g: 0.9724137, b: 0, a: 1}
+    - _Fillcolor: {r: 0.15686275, g: 0.9254902, b: 0.3529412, a: 1}
+    - _Foamcolor: {r: 0.15686275, g: 0.44705883, b: 0.9254902, a: 1}
     - _Foamtexspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Foamtextiling: {r: 1, g: 1, b: 0, a: 0}
-    - _Fresnelcolor: {r: 1, g: 0.78580123, b: 0.64705884, a: 1}
+    - _Fresnelcolor: {r: 0.64705884, g: 0.94158214, b: 1, a: 1}
     - _Noisecolor: {r: 0.15045653, g: 0, b: 0.9485294, a: 1}
-    - _Noisespeed: {r: 0, g: -0.02, b: 0, a: 0}
+    - _Noisespeed: {r: 0, g: 0, b: -0.005, a: 0}
     - _Noisetexspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Noisetextiling: {r: 1, g: 1, b: 0, a: 0}
-    - _Rimlightcolor: {r: 1, g: 0.80689657, b: 0, a: 1}
+    - _Rimlightcolor: {r: 1, g: 0.55862063, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}

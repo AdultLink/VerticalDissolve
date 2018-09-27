@@ -121,7 +121,7 @@ Material:
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _Basecolor: {r: 0.15668245, g: 0.9264706, b: 0.38496444, a: 1}
+    - _Basecolor: {r: 0.202941, g: 1.2, b: 0.49862054, a: 1}
     - _Basetexspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Basetextiling: {r: 1, g: 1, b: 0, a: 0}
     - _Bordercolor: {r: 0.113235205, g: 1.1, b: 0.5283567, a: 1}

@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Orb3
   m_Shader: {fileID: 4800000, guid: 5b6a9ce32c9e7394294524118268c25c, type: 3}
-  m_ShaderKeywords: _EMISSION _LAYERNOISE_ON
+  m_ShaderKeywords: _EMISSION _ENABLERIMLIGHT_ON
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -51,7 +51,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Foamtex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 2034fc0b972e55c40bed59c5387a7bcb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -63,7 +63,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Noisetex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: e06510d66e790dc4bb7ed2e7d198ecb1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -86,6 +86,7 @@ Material:
     - _Borderwidth: 0.18
     - _BumpScale: 1
     - _Cutoff: 0.5
+    - _Desaturation: 0
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _Enablerimlight: 1
@@ -95,7 +96,7 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Invertmask: 0
-    - _Layernoise: 1
+    - _Layernoise: 0
     - _Metallic: 0
     - _Mode: 0
     - _Noiseamount: 12.06
@@ -121,20 +122,21 @@ Material:
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
-    - _Basecolor: {r: 0.9264706, g: 0.15668245, b: 0.15668245, a: 1}
-    - _Basetexspeed: {r: 0, g: 0, b: 0, a: 0}
-    - _Basetextiling: {r: 1, g: 1, b: 0, a: 0}
-    - _Bordercolor: {r: 1.4, g: 0.53387415, b: 0.14411744, a: 1}
+    - _Basecolor: {r: 0, g: 0, b: 0, a: 1}
+    - _Basetexspeed: {r: -0.05, g: 0, b: 0, a: 0}
+    - _Basetextiling: {r: 5, g: 5, b: 0, a: 0}
+    - _Bordercolor: {r: 1.6, g: 0.66953343, b: 0.16470566, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Direction: {r: 0, g: 1, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Fillcolor: {r: 0.4779411, g: 0.119485244, b: 0.119485244, a: 1}
-    - _Foamtexspeed: {r: 0, g: 0, b: 0, a: 0}
-    - _Foamtextiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Foamcolor: {r: 1.6, g: 0.73225135, b: 0.50588226, a: 1}
+    - _Foamtexspeed: {r: -0.05, g: 0.05, b: 0, a: 0}
+    - _Foamtextiling: {r: 5, g: 5, b: 0, a: 0}
     - _Fresnelcolor: {r: 0.64705884, g: 0.94158214, b: 1, a: 1}
-    - _Noisecolor: {r: 0.15045653, g: 0, b: 0.9485294, a: 1}
-    - _Noisespeed: {r: 0, g: -0.02, b: 0, a: 0}
-    - _Noisetexspeed: {r: 0, g: 0, b: 0, a: 0}
+    - _Noisecolor: {r: 0.35294116, g: 0.10899653, b: 0.10899653, a: 1}
+    - _Noisespeed: {r: 0, g: -0.2, b: 0, a: 0}
+    - _Noisetexspeed: {r: 0.2, g: 0, b: 0, a: 0}
     - _Noisetextiling: {r: 1, g: 1, b: 0, a: 0}
-    - _Rimlightcolor: {r: 1, g: 0.8862069, b: 0.5147059, a: 1}
+    - _Rimlightcolor: {r: 1.6000004, g: 0.5372819, b: 0.29411763, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
