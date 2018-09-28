@@ -83,6 +83,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _Baseopacity: 1
+    - _BasetexDesaturation: 1
     - _Borderwidth: 0
     - _BumpScale: 1
     - _Cutoff: 0.5
@@ -91,7 +93,7 @@ Material:
     - _DstBlend: 0
     - _Enablerimlight: 1
     - _FillPercentage: 0.77
-    - _Fillpercentage: 0.113872916
+    - _Fillpercentage: 0.6128803
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -101,12 +103,14 @@ Material:
     - _Mode: 0
     - _Noiseamount: 12.06
     - _Noisescale: 0.8
+    - _Noisetexopacity: 1
     - _OcclusionStrength: 1
     - _Opacity: 0
     - _Parallax: 0.02
     - _Rimlightbias: 0
     - _Rimlightpower: 3.5
     - _Rimlightscale: 1
+    - _SecondarytexDesaturation: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

@@ -83,6 +83,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _Baseopacity: 1
+    - _BasetexDesaturation: 1
     - _Borderwidth: 0.18
     - _BumpScale: 1
     - _Cutoff: 0.5
@@ -92,6 +94,7 @@ Material:
     - _Enablerimlight: 1
     - _FillPercentage: 0.77
     - _Fillpercentage: 0.57
+    - _Globalopacity: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -101,12 +104,14 @@ Material:
     - _Mode: 0
     - _Noiseamount: 12.06
     - _Noisescale: 2.3
+    - _Noisetexopacity: 1
     - _OcclusionStrength: 1
     - _Opacity: 0
     - _Parallax: 0.02
     - _Rimlightbias: 0
     - _Rimlightpower: 1.26
     - _Rimlightscale: 0.29
+    - _SecondarytexDesaturation: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -132,7 +137,7 @@ Material:
     - _Fillcolor: {r: 0.4779411, g: 0.119485244, b: 0.119485244, a: 1}
     - _Foamcolor: {r: 1.6, g: 0.73225135, b: 0.50588226, a: 1}
     - _Foamtexspeed: {r: -0.05, g: 0.05, b: 0, a: 0}
-    - _Foamtextiling: {r: 5, g: 5, b: 0, a: 0}
+    - _Foamtextiling: {r: 3, g: 3, b: 0, a: 0}
     - _Fresnelcolor: {r: 0.64705884, g: 0.94158214, b: 1, a: 1}
     - _Noisecolor: {r: 0.35294116, g: 0.10899653, b: 0.10899653, a: 1}
     - _Noisespeed: {r: 0, g: -0.2, b: 0, a: 0}
