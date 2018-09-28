@@ -11,13 +11,15 @@ public class PingpongDissolve : MonoBehaviour {
 	public Material mat;
 	private float fill = 0f;
 	private float range;
+	public float phase = 0f;
 	void Start () {
+		mat.SetFloat("_Fillpercentage", fill);
 		range = maxValue - minValue;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		fill = (range / 2f) * (Mathf.Sin(freq * Time.time) + 1f ) + minValue;
+		fill = (range / 2f) * (Mathf.Sin(freq * Time.time + phase) + 1f ) + minValue;
 		mat.SetFloat("_Fillpercentage", fill);
 	}
 }
