@@ -10003,7 +10003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  rotationSpeed: 300
+  rotationSpeed: 100
   smoothTime: 20
   lockedIcon: {fileID: 0}
   unlockedIcon: {fileID: 0}
