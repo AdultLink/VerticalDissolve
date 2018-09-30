@@ -339,7 +339,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1395993102}
-  - {fileID: 299790339}
   m_Father: {fileID: 1332907004}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -559,15 +558,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 230655832}
   m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.003}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0017825633}
+  m_LocalScale: {x: 0.5943253, y: 0.3425332, z: 54.68418}
   m_Children: []
-  m_Father: {fileID: 1067869059}
-  m_RootOrder: 1
+  m_Father: {fileID: 1382120733}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.2, y: 0.0181}
+  m_AnchoredPosition: {x: -3.7, y: 0.006199859}
   m_SizeDelta: {x: 1.352, y: 2.556}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &230655834
@@ -600,8 +599,12 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 't srtj srtjw6i w7ie 7i e7iwti w6i w6i w6i srtyu fyhs6u rthwr56u hsth r6u
-    srtuh5 ywr6th srtu srtyj syj '
+  m_text: 'By adding a second noise layer (''layer noise'' option), we can achieve
+    a different look.
+
+
+    Play around with the ''amplitude'' and ''frequency'' parameters on both axes,
+    as well as the ''noise scale'' and see what you can come up with! '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8111d82bf3bb04140959de072ecdd7e5, type: 2}
   m_sharedMaterial: {fileID: 21804326927087244, guid: 8111d82bf3bb04140959de072ecdd7e5,
@@ -670,12 +673,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 230655835}
-    characterCount: 102
+    characterCount: 227
     spriteCount: 0
-    spaceCount: 19
-    wordCount: 19
+    spaceCount: 41
+    wordCount: 40
     linkCount: 0
-    lineCount: 4
+    lineCount: 11
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -891,15 +894,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 286731714}
   m_LocalRotation: {x: -0, y: 0.0000004768371, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.193}
-  m_LocalScale: {x: 2.2562265, y: 2.2562265, z: 2.2562234}
+  m_LocalPosition: {x: 0, y: 0, z: -1.3}
+  m_LocalScale: {x: 0.6372574, y: 0.3133646, z: 61.674408}
   m_Children: []
-  m_Father: {fileID: 1944697938}
+  m_Father: {fileID: 905545185}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.004, y: 0.005}
+  m_AnchoredPosition: {x: 0.0011298283, y: 0.0006944264}
   m_SizeDelta: {x: 1.282, y: 2.867}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &286731716
@@ -932,7 +935,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: The most immediate use for this shader is a teleportation effect
+  m_text: When was the last time you visited a museum?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8111d82bf3bb04140959de072ecdd7e5, type: 2}
   m_sharedMaterial: {fileID: 21804326927087244, guid: 8111d82bf3bb04140959de072ecdd7e5,
@@ -1001,12 +1004,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 286731717}
-    characterCount: 64
+    characterCount: 44
     spriteCount: 0
-    spaceCount: 10
-    wordCount: 11
+    spaceCount: 8
+    wordCount: 9
     linkCount: 0
-    lineCount: 3
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -1172,15 +1175,15 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 299790338}
   m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -1.1725}
-  m_LocalScale: {x: 0.6134316, y: 0.6134316, z: 0.6134316}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.7559596, y: 0.5074009, z: 24.882837}
   m_Children: []
-  m_Father: {fileID: 144014021}
-  m_RootOrder: 1
+  m_Father: {fileID: 1395993102}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.474, y: 0.5568}
+  m_AnchoredPosition: {x: -1.2, y: -0.0039703455}
   m_SizeDelta: {x: 1.1057, y: 1.7161}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &299790340
@@ -1213,7 +1216,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: The most immediate use for this shader is a teleportation effect
+  m_text: This shader allows you to visually dissolve a mesh in a vertical fashion,
+    which can be leveraged to achieve interesting effects
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8111d82bf3bb04140959de072ecdd7e5, type: 2}
   m_sharedMaterial: {fileID: 21804326927087244, guid: 8111d82bf3bb04140959de072ecdd7e5,
@@ -1282,12 +1286,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 299790341}
-    characterCount: 64
+    characterCount: 127
     spriteCount: 0
-    spaceCount: 10
-    wordCount: 11
+    spaceCount: 20
+    wordCount: 21
     linkCount: 0
-    lineCount: 3
+    lineCount: 6
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -2683,8 +2687,17 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 't srtj srtjw6i w7ie 7i e7iwti w6i w6i w6i srtyu fyhs6u rthwr56u hsth r6u
-    srtuh5 ywr6th srtu srtyj syj '
+  m_text: 'Additionally, it is possible to add some noise to the edge, as can be seen
+    on the right-hand orbs. ''Noise scale'' controls the 3D size of said noise.
+
+
+    Furthermore, you can animate this noise by setting a ''noise speed'', in three
+    separate axes.
+
+
+    Besides the dissolve effect, which is the main goal for this shader, it also offers
+    the possibility to add a rimlight and control its color and size. This is very
+    noticeable in these examples (you can see some glow around the spheres).'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8111d82bf3bb04140959de072ecdd7e5, type: 2}
   m_sharedMaterial: {fileID: 21804326927087244, guid: 8111d82bf3bb04140959de072ecdd7e5,
@@ -2753,12 +2766,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 575103658}
-    characterCount: 102
+    characterCount: 478
     spriteCount: 0
-    spaceCount: 19
-    wordCount: 19
+    spaceCount: 86
+    wordCount: 85
     linkCount: 0
-    lineCount: 3
+    lineCount: 16
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -3993,7 +4006,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.443, y: 0.5616, z: -1.1708002}
   m_LocalScale: {x: 0.0246528, y: 1.2089683, z: 0.81146085}
-  m_Children: []
+  m_Children:
+  - {fileID: 864415067}
   m_Father: {fileID: 1426844986}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4419,16 +4433,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 864415066}
   m_LocalRotation: {x: -0, y: 0.70710677, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -1.1725}
-  m_LocalScale: {x: 0.6134316, y: 0.6134316, z: 0.6134316}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0001}
+  m_LocalScale: {x: 0.7559596, y: 0.5074009, z: 24.882837}
   m_Children: []
-  m_Father: {fileID: 1426844986}
-  m_RootOrder: 1
+  m_Father: {fileID: 786260714}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.474, y: 0.5568}
-  m_SizeDelta: {x: 1.1057, y: 1.7161}
+  m_AnchoredPosition: {x: -0.9, y: 0.001}
+  m_SizeDelta: {x: 1.14, y: 1.7358}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &864415068
 MonoBehaviour:
@@ -4460,7 +4474,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: The most immediate use for this shader is a teleportation effect
+  m_text: 'The dissolve edge can be distorted by tweaking the ''amplitude'' and ''frequency''
+    parameters on both axes.
+
+
+    ''Invert'' inverts the opacity mask, thus changing the way the object fills.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8111d82bf3bb04140959de072ecdd7e5, type: 2}
   m_sharedMaterial: {fileID: 21804326927087244, guid: 8111d82bf3bb04140959de072ecdd7e5,
@@ -4529,12 +4547,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 864415069}
-    characterCount: 64
+    characterCount: 179
     spriteCount: 0
-    spaceCount: 10
-    wordCount: 11
+    spaceCount: 28
+    wordCount: 28
     linkCount: 0
-    lineCount: 3
+    lineCount: 11
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
@@ -4952,9 +4970,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0.057}
   m_LocalScale: {x: 3.5405262, y: 7.2000055, z: 0.036582813}
-  m_Children: []
+  m_Children:
+  - {fileID: 286731715}
   m_Father: {fileID: 1944697938}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &905545186
 MeshRenderer:
@@ -8630,7 +8649,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1382120733}
-  - {fileID: 230655833}
   m_Father: {fileID: 1444594677}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9192,7 +9210,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.058, y: 0, z: 0}
   m_LocalScale: {x: 0.018286824, y: 2.9194252, z: 1.6825801}
-  m_Children: []
+  m_Children:
+  - {fileID: 230655833}
   m_Father: {fileID: 1067869059}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9263,7 +9282,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.443, y: 0.5616, z: -1.1708002}
   m_LocalScale: {x: 0.0246528, y: 1.2089683, z: 0.81146085}
-  m_Children: []
+  m_Children:
+  - {fileID: 299790339}
   m_Father: {fileID: 144014021}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9332,7 +9352,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1410991979}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.023900023, y: -1.264, z: -0.75}
+  m_LocalPosition: {x: 0.023900023, y: -1.264, z: -1.02}
   m_LocalScale: {x: 0.1311188, y: 0.16519435, z: 1.3753799}
   m_Children: []
   m_Father: {fileID: 1472352520}
@@ -9405,7 +9425,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 786260714}
-  - {fileID: 864415067}
   m_Father: {fileID: 717321415}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9468,7 +9487,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1470224121}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.555, y: -1.3416739, z: -0.75}
+  m_LocalPosition: {x: -0.555, y: -1.3416739, z: -1.0200005}
   m_LocalScale: {x: 1.2889503, y: 0.075219996, z: 1.3753809}
   m_Children: []
   m_Father: {fileID: 1472352520}
@@ -15076,7 +15095,6 @@ Transform:
   m_LocalPosition: {x: 5.72, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 286731715}
   - {fileID: 905545185}
   m_Father: {fileID: 841509557}
   m_RootOrder: 2

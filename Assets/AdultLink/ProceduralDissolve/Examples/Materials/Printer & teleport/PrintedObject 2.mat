@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: PrintedObject 2
   m_Shader: {fileID: 4800000, guid: 5b6a9ce32c9e7394294524118268c25c, type: 3}
-  m_ShaderKeywords: _EMISSION _ENABLERIMLIGHT_ON _LAYERNOISE_ON
+  m_ShaderKeywords: _EMISSION _ENABLERIMLIGHT_ON
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -93,12 +93,12 @@ Material:
     - _DstBlend: 0
     - _Enablerimlight: 1
     - _FillPercentage: 0.77
-    - _Fillpercentage: 11.906514
+    - _Fillpercentage: 1.949892
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Invertmask: 0
-    - _Layernoise: 1
+    - _Layernoise: 0
     - _Metallic: 0
     - _Mode: 0
     - _Noiseamount: 12.06

@@ -93,7 +93,7 @@ Material:
     - _DstBlend: 0
     - _Enablerimlight: 1
     - _FillPercentage: 0.77
-    - _Fillpercentage: -0.77916056
+    - _Fillpercentage: 1.9993138
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1

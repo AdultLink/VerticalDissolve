@@ -93,7 +93,7 @@ Material:
     - _DstBlend: 0
     - _Enablerimlight: 1
     - _FillPercentage: 0.77
-    - _Fillpercentage: 1.1046886
+    - _Fillpercentage: 0.4615206
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -139,7 +139,7 @@ Material:
     - _Foamtextiling: {r: 1, g: 1, b: 0, a: 0}
     - _Fresnelcolor: {r: 0.44117647, g: 0.86125755, b: 1, a: 1}
     - _Noisecolor: {r: 0.15045653, g: 0, b: 0.9485294, a: 1}
-    - _Noisespeed: {r: 0, g: -0.02, b: 0, a: 0}
+    - _Noisespeed: {r: 0, g: 0, b: 0, a: 0}
     - _Noisetexspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Noisetextiling: {r: 1, g: 1, b: 0, a: 0}
     - _Rimlightcolor: {r: 0.17955232, g: 0.32014382, b: 0.5955882, a: 1}
