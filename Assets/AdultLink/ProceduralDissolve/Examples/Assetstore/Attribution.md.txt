@@ -1,0 +1,2 @@
+Knight model and textures by 3DMAESEN:
+	- https://assetstore.unity.com/packages/3d/characters/humanoids/strong-knight-83586

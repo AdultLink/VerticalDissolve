@@ -10,7 +10,7 @@ public class DissolveControl : MonoBehaviour {
 	public bool autoUpdate = false;
 	public Material mat;
 	[Range(0f, 1f)]
-	public float fillPercentage;
+	public float fill;
 	// Use this for initialization
 	void Start () {
 		valueRange = maxValue - minValue;
@@ -19,12 +19,12 @@ public class DissolveControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (autoUpdate) {
-			setFill(fillPercentage);
+			setFill(fill);
 		}
 	}
 
 	public void setFill(float _fillPercentage) {
-		fillPercentage = Mathf.Clamp(fillPercentage, 0f, 1f);
-		mat.SetFloat("_Fillpercentage", minValue + valueRange * _fillPercentage);
+		fill = Mathf.Clamp(fill, 0f, 1f);
+		mat.SetFloat("_Fill", minValue + valueRange * _fillPercentage);
 	}
 }

@@ -1,0 +1,5 @@
+- Charmander model (minus textures) is a modified version of ClassyGoat's (CC BY-SA 3.0):
+	https://www.thingiverse.com/thing:826836
+
+- Snorlax model (minus textures) is a modified version of Anthonylu's (CC BY-NC 3.0):
+	https://www.thingiverse.com/thing:1780291 
