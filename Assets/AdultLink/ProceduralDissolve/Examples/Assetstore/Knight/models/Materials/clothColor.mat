@@ -120,7 +120,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _Enablerimlight: 0
-    - _Fill: 0.6628443
+    - _Fill: 1.2368613
     - _Fillpercentage: 1.8599814
     - _Gloss: 0.79
     - _GlossMapScale: 1
@@ -136,7 +136,7 @@ Material:
     - _Parallax: 0.02
     - _Rimlightbias: 0
     - _Rimlightpower: 3.5
-    - _Rimlightscale: 0.011947691
+    - _Rimlightscale: 0.12731352
     - _SecondarytexDesaturation: 0
     - _Smoothness: 1
     - _SmoothnessTextureChannel: 0
