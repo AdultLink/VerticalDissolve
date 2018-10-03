@@ -12,44 +12,67 @@ public class VerticalDissolveEditor : ShaderGUI
 	private MaterialProperty _Fill = null;
 	private MaterialProperty _Invert = null;
 	private MaterialProperty _Worldcoordinates = null;
+	private MaterialProperty _Layernoise = null;
+	private MaterialProperty _Tintinsidecolor = null;
+	private MaterialProperty _Fillcolor = null;
 
 	//BORDER SETTINGS
 	private MaterialProperty _Borderwidth = null;
 	private MaterialProperty _Bordercolor = null;
 	private MaterialProperty _Bordernoisescale = null;
-	private MaterialProperty _Noisespeed = null;
+	private MaterialProperty _Bordernoisespeed = null;
+	private MaterialProperty _Wave1_amplitude = null;
+	private MaterialProperty _Wave1_frequency = null;
+	private MaterialProperty _Wave1_offset = null;
+	private MaterialProperty _Wave2_amplitude = null;
+	private MaterialProperty _Wave2_frequency = null;
+	private MaterialProperty _Wave2_offset = null;
 
+	//RIMLIGHT SETTINGS
+	private MaterialProperty _Enable_rimlight = null;
+	private MaterialProperty _Rimlight_color = null;
+	private MaterialProperty _Rimlight_power  = null;
+	private MaterialProperty _Rimlight_scale  = null;
+	private MaterialProperty _Rimlight_bias  = null;
+	
 	//TEXTURE SETTINGS
-	//SET1
-	private MaterialProperty Set1_Albedo = null;
-	private MaterialProperty Set1_Albedo_tint = null;
-	private MaterialProperty Set1_Normal = null;
-	private MaterialProperty Set1_Emission = null;
-	private MaterialProperty Set1_Emission_tint = null;
-	private MaterialProperty Set1_Metallic = null;
-	private MaterialProperty Set1_Metallic_multiplier = null;
-	private MaterialProperty Set1_Smoothness = null;
-	private MaterialProperty Set1_Tiling = null;
-	private MaterialProperty Set1_Offset = null;
+	private MaterialProperty _Maintiling = null;
+	private MaterialProperty _Mainoffset = null;
+	private MaterialProperty _Albedo = null;
+	private MaterialProperty _Normal = null;
+		//EMISSION
+	private MaterialProperty _Activateemission = null;
+	private MaterialProperty _Emission = null;
+	private MaterialProperty _Emission_color = null;
+	private MaterialProperty _Emission_texspeed = null;
+	private MaterialProperty _Emission_textiling = null;
+		//SEC EMISSION
+	private MaterialProperty _Activatesecondaryemission = null;
+	private MaterialProperty _Secondaryemission = null;
+	private MaterialProperty _Secondaryemission_color = null;
+	private MaterialProperty _Secondaryemission_texspeed = null;
+	private MaterialProperty _Secondaryemission_textiling = null;
+	private MaterialProperty _Secondaryemission_desaturation = null;
+		//EMISSION NOISE
+	private MaterialProperty _Secondaryemissionnoise = null;
+	private MaterialProperty _Secondaryemissionnoise_opacity = null;
+	private MaterialProperty _Secondaryemissionnoise_texspeed = null;
+	private MaterialProperty _Secondaryemissionnoise_textiling = null;
+	private MaterialProperty _Secondaryemissionnoise_desaturation = null;
+	private MaterialProperty _Specular = null;
+	private MaterialProperty _Smoothness = null;
+	private MaterialProperty _Occlusion = null;
+	private MaterialProperty _Bordertexture = null;
 
-	//SET2
-	private MaterialProperty Set2_Albedo = null;
-	private MaterialProperty Set2_Albedo_tint = null;
-	private MaterialProperty Set2_Normal = null;
-	private MaterialProperty Set2_Emission = null;
-	private MaterialProperty Set2_Emission_tint = null;
-	private MaterialProperty Set2_Metallic = null;
-	private MaterialProperty Set2_Metallic_multiplier = null;
-	private MaterialProperty Set2_Smoothness = null;
-	private MaterialProperty Set2_Tiling = null;
-	private MaterialProperty Set2_Offset = null;
-
-
+	//SWITCHES
 	protected static bool ShowMainSettings = true;
 	protected static bool ShowBorderSettings = true;
+	protected static bool ShowBorderWaveSettings = true;
 	protected static bool ShowTextureSettings = true;
-	protected static bool ShowTextureSet1Settings = true;
-	protected static bool ShowTextureSet2Settings = true;
+	protected static bool ShowRimlightSettings = true;
+	protected static bool ShowEmissionSettings = false;
+	protected static bool ShowSecondaryEmissionSettings = false;
+	protected static bool ShowEmissionNoiseSettings = true;
  	
 	public override void OnGUI(MaterialEditor materialEditor, MaterialProperty[] properties)
     {
@@ -62,48 +85,73 @@ public class VerticalDissolveEditor : ShaderGUI
 	void GetProperties() {
 
 		//MAIN SETTINGS
-		_Invert = FindProperty("_Invert", _properties);
+		_Fill = FindProperty("_Fill", _properties);
+		_Invert = FindProperty("_Invertmask", _properties);
+		_Worldcoordinates = FindProperty("_Worldcoordinates", _properties);
+		_Layernoise = FindProperty("_Layernoise", _properties);
+		_Tintinsidecolor = FindProperty("_Tintinsidecolor", _properties);
+		_Fillcolor = FindProperty("_Fillcolor", _properties);
 
 		//BORDER SETTINGS
+		
+		_Borderwidth = FindProperty("_Borderwidth", _properties);
 		_Bordercolor = FindProperty("_Bordercolor", _properties);
-		_Bordernoisescale = FindProperty("_Bordernoisescale", _properties);
-		_Noisespeed = FindProperty("_Noisespeed", _properties);
+		_Bordernoisescale = FindProperty("_Noisescale", _properties);
+		_Bordernoisespeed = FindProperty("_Noisespeed", _properties);
+		_Wave1_amplitude = FindProperty("_Wave1amplitude", _properties);
+		_Wave1_frequency = FindProperty("_Wave1frequency", _properties);
+		_Wave1_offset = FindProperty("_Wave1offset", _properties);
+		_Wave2_amplitude = FindProperty("_Wave2amplitude", _properties);
+		_Wave2_frequency = FindProperty("_Wave2Frequency", _properties);
+		_Wave2_offset = FindProperty("_Wave2offset", _properties);
+		_Bordertexture = FindProperty("_Bordertexture", _properties);
+
+		//RIMLIGHT SETTINGS
+		_Enable_rimlight = FindProperty("_Enablerimlight", _properties);
+		_Rimlight_color = FindProperty("_Rimlightcolor", _properties);
+		_Rimlight_power = FindProperty("_Rimlightpower", _properties);
+		_Rimlight_scale = FindProperty("_Rimlightscale", _properties);
+		_Rimlight_bias = FindProperty("_Rimlightbias", _properties);
 
 		//TEXTURE SETTINGS
-		//SET1
-		Set1_Albedo = FindProperty("_Set1_albedo", _properties);
-		Set1_Albedo_tint = FindProperty("_Set1_albedo_tint", _properties);
-		Set1_Normal = FindProperty("_Set1_normal", _properties);
-		Set1_Emission = FindProperty("_Set1_emission", _properties);
-		Set1_Emission_tint = FindProperty("_Set1_emission_tint", _properties);
-		Set1_Metallic = FindProperty("_Set1_metallic", _properties);
-		Set1_Metallic_multiplier = FindProperty("_Set1_metallic_multiplier", _properties);
-		Set1_Smoothness = FindProperty("_Set1_smoothness", _properties);
-		Set1_Tiling = FindProperty("_Set1_tiling", _properties);
-		Set1_Offset = FindProperty("_Set1_offset", _properties);
+		_Maintiling = FindProperty("_Maintiling", _properties);
+		_Mainoffset = FindProperty("_Mainoffset", _properties);
+		_Albedo = FindProperty("_Albedo", _properties);
+		_Normal = FindProperty("_Normal", _properties);
+			//EMISSION
+		_Activateemission = FindProperty("_Activateemission", _properties);
+		_Emission = FindProperty("_Emission", _properties);
+		_Emission_color = FindProperty("_Basecolor", _properties);
+		_Emission_texspeed = FindProperty("_Emissiontexspeed", _properties);
+		_Emission_textiling = FindProperty("_Emissiontextiling", _properties);
+			//SEC EMISSION
+		_Activatesecondaryemission = FindProperty("_Activatesecondaryemission", _properties);
+		_Secondaryemission = FindProperty("_Secondaryemission" , _properties);
+		_Secondaryemission_color = FindProperty("_Secondaryemissioncolor", _properties);
+		_Secondaryemission_texspeed = FindProperty("_Secondaryemissionspeed", _properties);
+		_Secondaryemission_textiling = FindProperty("_Secondaryemissiontiling", _properties);
+		_Secondaryemission_desaturation = FindProperty("_SecondaryEmissionDesaturation", _properties);
+			//EMISSION NOISE
+		_Secondaryemissionnoise = FindProperty("_Secondaryemissionnoise", _properties);
+		_Secondaryemissionnoise_texspeed = FindProperty("_Noisetexspeed", _properties);
+		_Secondaryemissionnoise_textiling = FindProperty("_Noisetextiling", _properties);
+		_Secondaryemissionnoise_desaturation = FindProperty("_SecondaryEmissionDesaturation", _properties);
+		_Secondaryemissionnoise_opacity = FindProperty("_Noisetexopacity", _properties);
 
-		//SET2
-		Set2_Albedo = FindProperty("_Set2_albedo", _properties);
-		Set2_Albedo_tint = FindProperty("_Set2_albedo_tint", _properties);
-		Set2_Normal = FindProperty("_Set2_normal", _properties);
-		Set2_Emission = FindProperty("_Set2_emission", _properties);
-		Set2_Emission_tint = FindProperty("_Set2_emission_tint", _properties);
-		Set2_Metallic = FindProperty("_Set2_metallic", _properties);
-		Set2_Metallic_multiplier = FindProperty("_Set2_metallic_multiplier", _properties);
-	    Set2_Smoothness = FindProperty("_Set2_smoothness", _properties);
-		Set2_Tiling = FindProperty("_Set2_tiling", _properties);
-		Set2_Offset = FindProperty("_Set2_offset", _properties);
+		_Specular = FindProperty("_Specular", _properties);
+		_Smoothness = FindProperty("_Smoothness", _properties);
+		_Occlusion = FindProperty("_Occlusion", _properties);
 	}
 
 	static Texture2D bannerTexture = null;
     static GUIStyle title = null;
     static GUIStyle linkStyle = null;
-    static string repoURL = "https://github.com/adultlink/spheredissolve";
+    static string repoURL = "https://github.com/adultlink/verticaldissolve";
 
 	void DrawBanner()
     {
         if (bannerTexture == null)
-            bannerTexture = Resources.Load<Texture2D>("SphereDissolveBanner");
+            bannerTexture = Resources.Load<Texture2D>("VerticalDissolveBanner");
 
         if (title == null)
         {
@@ -122,7 +170,7 @@ public class VerticalDissolveEditor : ShaderGUI
             var rect = GUILayoutUtility.GetRect(0, int.MaxValue, 60, 60);
             EditorGUI.DrawPreviewTexture(rect, bannerTexture, null, ScaleMode.ScaleAndCrop);
             //
-            EditorGUI.LabelField(rect, "SphereDissolve", title);
+            EditorGUI.LabelField(rect, "VerticalDissolve", title);
 
             if (GUI.Button(rect, "", linkStyle)) {
                 Application.OpenURL(repoURL);
@@ -133,10 +181,10 @@ public class VerticalDissolveEditor : ShaderGUI
 
 	void DrawGUI() {
 		GetProperties();
-		DrawBanner();
+		//DrawBanner();
 
 		startFoldout();
-		ShowMainSettings = EditorGUILayout.Foldout(ShowMainSettings, "General settings");
+		ShowMainSettings = EditorGUILayout.Foldout(ShowMainSettings, "Main settings");
 		if (ShowMainSettings){
 			DrawMainSettings();
 		}
@@ -150,20 +198,16 @@ public class VerticalDissolveEditor : ShaderGUI
 		endFoldout();
 
 		startFoldout();
+		ShowRimlightSettings = EditorGUILayout.Foldout(ShowRimlightSettings, "Rim light");
+		if (ShowRimlightSettings){
+			DrawRimlightSettings();
+		}
+		endFoldout();
+
+		startFoldout();
 		ShowTextureSettings = EditorGUILayout.Foldout(ShowTextureSettings, "Textures");
 		if (ShowTextureSettings){
-			startFoldout();
-			ShowTextureSet1Settings = EditorGUILayout.Foldout(ShowTextureSet1Settings, "Texture set 1");
-			if (ShowTextureSet1Settings){
-				DrawTextureSet1Settings();
-			}
-			endFoldout();
-			startFoldout();
-			ShowTextureSet2Settings = EditorGUILayout.Foldout(ShowTextureSet2Settings, "Texture set 2");
-			if (ShowTextureSet2Settings){
-				DrawTextureSet2Settings();
-			}
-			endFoldout();
+			DrawTextureSettings();
 		}
 		endFoldout();
     }
@@ -171,47 +215,89 @@ public class VerticalDissolveEditor : ShaderGUI
 	void DrawMainSettings() {
 		//MAIN SETTINGS
 		_materialEditor.SetDefaultGUIWidths();
-		_materialEditor.ShaderProperty(_Invert, _Invert.displayName);
+		_materialEditor.ShaderProperty(_Fill, "Fill amount");
+		_materialEditor.ShaderProperty(_Invert, "Invert");
+		_materialEditor.ShaderProperty(_Worldcoordinates, "Use world coords");
+		_materialEditor.ShaderProperty(_Layernoise, "Layer noise");
+		_materialEditor.ShaderProperty(_Tintinsidecolor, "Tint inside");
+		_materialEditor.ShaderProperty(_Fillcolor, "Tint color");
 	}
 
 	void DrawBorderSettings() {
 		//BORDER SETTTINGS
 		_materialEditor.SetDefaultGUIWidths();
 		_materialEditor.ShaderProperty(_Bordercolor, "Color");
+		_materialEditor.ShaderProperty(_Borderwidth, "Width");
 		_materialEditor.ShaderProperty(_Bordernoisescale, "Noise scale");
-		_materialEditor.ShaderProperty(_Noisespeed, "Noise speed");
-	}
-	
-	
+		_materialEditor.ShaderProperty(_Bordernoisespeed, "Noise speed");
+		_materialEditor.TexturePropertySingleLine(new GUIContent("Texture"), _Bordertexture);
 
-	void DrawTextureSet1Settings() {
-		//TEXTURE SETTINGS
-		_materialEditor.SetDefaultGUIWidths();
-		_materialEditor.TexturePropertySingleLine(new GUIContent("Albedo"), Set1_Albedo);
-		_materialEditor.ShaderProperty(Set1_Albedo_tint, "Albedo tint color");
-		_materialEditor.TexturePropertySingleLine(new GUIContent("Normal"), Set1_Normal);
-		_materialEditor.TexturePropertySingleLine(new GUIContent("Emission"), Set1_Emission);
-		_materialEditor.ShaderProperty(Set1_Emission_tint, "Emission tint color");
-		_materialEditor.TexturePropertySingleLine(new GUIContent("Metallic"), Set1_Metallic);
-		_materialEditor.ShaderProperty(Set1_Metallic_multiplier, "Metallic");
-		_materialEditor.ShaderProperty(Set1_Smoothness, "Smoothness");
-		_materialEditor.ShaderProperty(Set1_Tiling, "Tiling");
-		_materialEditor.ShaderProperty(Set1_Offset, "Offset");
+		startFoldout();
+		ShowBorderWaveSettings = EditorGUILayout.Foldout(ShowBorderWaveSettings, "Wave settings");
+		if (ShowBorderWaveSettings){
+			_materialEditor.SetDefaultGUIWidths();
+			_materialEditor.ShaderProperty(_Wave1_amplitude, "[Axis 1] Amplitude");
+			_materialEditor.ShaderProperty(_Wave1_frequency, "[Axis 1] Frequency");
+			_materialEditor.ShaderProperty(_Wave1_offset, "[Axis 1] Offset");
+			_materialEditor.ShaderProperty(_Wave2_amplitude, "[Axis 2] Amplitude");
+			_materialEditor.ShaderProperty(_Wave2_frequency, "[Axis 2] Frequency");
+			_materialEditor.ShaderProperty(_Wave2_offset, "[Axis 2] Offset");
+		}
+		endFoldout();
 	}
 
-	void DrawTextureSet2Settings() {
-		//TEXTURE SETTINGS
+	void DrawRimlightSettings() {
 		_materialEditor.SetDefaultGUIWidths();
-		_materialEditor.TexturePropertySingleLine(new GUIContent("Albedo"), Set2_Albedo);
-		_materialEditor.ShaderProperty(Set2_Albedo_tint, "Albedo tint color");
-		_materialEditor.TexturePropertySingleLine(new GUIContent("Normal"), Set2_Normal);
-		_materialEditor.TexturePropertySingleLine(new GUIContent("Emission"), Set2_Emission);
-		_materialEditor.ShaderProperty(Set2_Emission_tint, "Emission tint color");
-		_materialEditor.TexturePropertySingleLine(new GUIContent("Metallic"), Set2_Metallic);
-		_materialEditor.ShaderProperty(Set2_Metallic_multiplier, "Metallic");
-		_materialEditor.ShaderProperty(Set2_Smoothness, "Smoothness");
-		_materialEditor.ShaderProperty(Set2_Tiling, "Tiling");
-		_materialEditor.ShaderProperty(Set2_Offset, "Offset");
+		_materialEditor.ShaderProperty(_Enable_rimlight, "Enable");
+		_materialEditor.ShaderProperty(_Rimlight_color, "Color");
+		_materialEditor.ShaderProperty(_Rimlight_power, "Power");
+		_materialEditor.ShaderProperty(_Rimlight_scale, "Scale");
+		_materialEditor.ShaderProperty(_Rimlight_bias, "Bias");
+	}
+
+	void DrawTextureSettings() {
+		_materialEditor.ShaderProperty(_Maintiling, "Tiling");
+		_materialEditor.ShaderProperty(_Mainoffset, "Offset");
+		_materialEditor.TexturePropertySingleLine(new GUIContent("Albedo"), _Albedo);
+		_materialEditor.TexturePropertySingleLine(new GUIContent("Normal"), _Normal);
+		_materialEditor.TexturePropertySingleLine(new GUIContent("Specular"), _Specular);
+		_materialEditor.ShaderProperty(_Smoothness, "Smoothness");
+		_materialEditor.TexturePropertySingleLine(new GUIContent("Occlusion"), _Occlusion);
+
+		startFoldout();
+		ShowEmissionSettings = EditorGUILayout.Foldout(ShowEmissionSettings, "Emission");
+		if (ShowEmissionSettings){
+			_materialEditor.ShaderProperty(_Activateemission, "Enable emission");
+			_materialEditor.TexturePropertySingleLine(new GUIContent("Emission"), _Emission);
+			_materialEditor.ShaderProperty(_Emission_color, "Tint");
+			_materialEditor.ShaderProperty(_Emission_texspeed, "Scroll speed");
+			_materialEditor.ShaderProperty(_Emission_textiling, "Tiling");
+
+			startFoldout();
+			ShowSecondaryEmissionSettings = EditorGUILayout.Foldout(ShowSecondaryEmissionSettings, "Secondary emission");
+			if (ShowSecondaryEmissionSettings){
+				_materialEditor.ShaderProperty(_Activatesecondaryemission, "Enable secondary emission");
+				_materialEditor.TexturePropertySingleLine(new GUIContent("Secondary emission"), _Secondaryemission);
+				_materialEditor.ShaderProperty(_Secondaryemission_color, "Tint");
+				_materialEditor.ShaderProperty(_Secondaryemission_texspeed, "Scroll speed");
+				_materialEditor.ShaderProperty(_Secondaryemission_textiling, "Tiling");
+				_materialEditor.ShaderProperty(_Secondaryemission_desaturation, "Desaturate");
+				
+				startFoldout();
+				ShowEmissionNoiseSettings = EditorGUILayout.Foldout(ShowEmissionNoiseSettings, "Emission noise");
+				if (ShowEmissionNoiseSettings){
+					_materialEditor.TexturePropertySingleLine(new GUIContent("Noise"), _Secondaryemissionnoise);
+					_materialEditor.ShaderProperty(_Secondaryemissionnoise_texspeed, "Scroll speed");
+					_materialEditor.ShaderProperty(_Secondaryemissionnoise_textiling, "Tiling");
+					_materialEditor.ShaderProperty(_Secondaryemissionnoise_desaturation, "Desaturate");
+					_materialEditor.ShaderProperty(_Secondaryemissionnoise_opacity, "Opacity");
+				}
+				endFoldout();
+			}
+			endFoldout();
+		}
+		endFoldout();
+
 	}
 	
 	void startFoldout() {

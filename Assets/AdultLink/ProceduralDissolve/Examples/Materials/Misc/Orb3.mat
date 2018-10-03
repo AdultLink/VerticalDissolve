@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Orb3
   m_Shader: {fileID: 4800000, guid: 5b6a9ce32c9e7394294524118268c25c, type: 3}
-  m_ShaderKeywords: _ACTIVATENEMISSIONSTUFF_ON _EMISSION _ENABLERIMLIGHT_ON
+  m_ShaderKeywords: _ACTIVATEEMISSION_ON _ACTIVATENEMISSIONSTUFF_ON _EMISSION _ENABLERIMLIGHT_ON
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -90,6 +90,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Secondaryemission:
+        m_Texture: {fileID: 2800000, guid: 2034fc0b972e55c40bed59c5387a7bcb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Secondaryemissionnoise:
+        m_Texture: {fileID: 2800000, guid: e06510d66e790dc4bb7ed2e7d198ecb1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -98,12 +106,18 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _texcoord:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _Activateemission: 1
     - _Activatenemissionstuff: 1
+    - _Activatesecondaryemission: 1
     - _Baseopacity: 1
     - _BasetexDesaturation: 1
     - _Borderwidth: 0.18
@@ -130,14 +144,19 @@ Material:
     - _OcclusionStrength: 1
     - _Opacity: 0
     - _Parallax: 0.02
+    - _Replaceinsidecolor: 1
     - _Rimlightbias: 0
     - _Rimlightpower: 1.26
     - _Rimlightscale: 0.29
+    - _SecondaryEmissionDesaturation: 0
+    - _SecondaryEmissionNoiseDesaturation: 0
+    - _Secondaryemission: 1
     - _SecondarytexDesaturation: 0
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _Tintinsidecolor: 1
     - _UVSec: 0
     - _Wave1amplitude: 0.037
     - _Wave1frequency: 0
@@ -157,14 +176,21 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Direction: {r: 0, g: 1, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Emissiontexspeed: {r: 0, g: 0, b: 0, a: 0}
+    - _Emissiontextiling: {r: 1, g: 1, b: 0, a: 0}
     - _Fillcolor: {r: 0.369, g: 0.09224993, b: 0.09224993, a: 1}
     - _Foamcolor: {r: 1.6, g: 0.73225135, b: 0.50588226, a: 1}
     - _Foamtexspeed: {r: -0.05, g: 0.05, b: 0, a: 0}
     - _Foamtextiling: {r: 3, g: 3, b: 0, a: 0}
     - _Fresnelcolor: {r: 0.64705884, g: 0.94158214, b: 1, a: 1}
+    - _Mainoffset: {r: 0, g: 0, b: 0, a: 0}
+    - _Maintiling: {r: 1, g: 1, b: 0, a: 0}
     - _Noisecolor: {r: 0.35294116, g: 0.10899653, b: 0.10899653, a: 1}
     - _Noisespeed: {r: 0, g: -0.2, b: 0, a: 0}
     - _Noisetexspeed: {r: 0.2, g: 0, b: 0, a: 0}
     - _Noisetextiling: {r: 1, g: 1, b: 0, a: 0}
     - _Rimlightcolor: {r: 1.6000004, g: 0.5372819, b: 0.29411763, a: 1}
+    - _Secondaryemissioncolor: {r: 1.6, g: 0.7341177, b: 0.5082354, a: 1}
+    - _Secondaryemissionspeed: {r: -0.05, g: -0.05, b: 0, a: 0}
+    - _Secondaryemissiontiling: {r: 3, g: 3, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
