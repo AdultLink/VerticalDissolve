@@ -123,7 +123,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _Enablerimlight: 1
-    - _Fill: 1.7345047
+    - _Fill: 2.09944
     - _FillPercentage: 0.77
     - _Fillpercentage: 1.0690981
     - _GlossMapScale: 1
@@ -178,6 +178,8 @@ Material:
     - _Foamtexspeed: {r: 0, g: 0, b: 0, a: 0}
     - _Foamtextiling: {r: 1, g: 1, b: 0, a: 0}
     - _Fresnelcolor: {r: 1, g: 0.64, b: 0.9304828, a: 1}
+    - _Mainoffset: {r: 0, g: 0, b: 0, a: 0}
+    - _Maintiling: {r: 1, g: 1, b: 0, a: 0}
     - _Noisecolor: {r: 0.15045653, g: 0, b: 0.9485294, a: 1}
     - _Noisespeed: {r: 0, g: -0.02, b: 0, a: 0}
     - _Noisetexspeed: {r: 0, g: 0, b: 0, a: 0}
