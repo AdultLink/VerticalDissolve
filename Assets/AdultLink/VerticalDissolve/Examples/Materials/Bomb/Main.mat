@@ -1,0 +1,191 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Main
+  m_Shader: {fileID: 4800000, guid: 5b6a9ce32c9e7394294524118268c25c, type: 3}
+  m_ShaderKeywords: _ACTIVATESECONDARYEMISSION_ON _EMISSION _ENABLERIMLIGHT_ON _INVERTMASK_ON
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Albedo:
+        m_Texture: {fileID: 2800000, guid: af84a07d00d33a142837e4eb64e81341, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Basetex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Bordertexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 0.5, y: 0.5}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Emission:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Foamtex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Metallic:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Noisetex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: f9dbf420c814a254eaca1a107d9a00c1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Occlusion:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Secondaryemission:
+        m_Texture: {fileID: 2800000, guid: 2034fc0b972e55c40bed59c5387a7bcb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Secondaryemissionnoise:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Specular:
+        m_Texture: {fileID: 2800000, guid: 431cefddd8f140045899a0ac5309a230, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Activateemission: 0
+    - _Activatenemissionstuff: 1
+    - _Activatesecondaryemission: 1
+    - _Baseopacity: 1
+    - _BasetexDesaturation: 1
+    - _Borderwidth: 0.58
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _Desaturation: 1
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _Enablerimlight: 1
+    - _Fill: -0.15
+    - _FillPercentage: 0.77
+    - _Fillpercentage: 1.8261812
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _Invertmask: 1
+    - _Layernoise: 0
+    - _Metallic: 0
+    - _Mode: 0
+    - _Noiseamount: 12.06
+    - _Noisescale: 0.8
+    - _Noisetexopacity: 1
+    - _OcclusionStrength: 1
+    - _Opacity: 0
+    - _Parallax: 0.02
+    - _Replaceinsidecolor: 1
+    - _Rimlightbias: 0
+    - _Rimlightpower: 1.8
+    - _Rimlightscale: 0
+    - _SecondaryEmissionDesaturation: 1
+    - _SecondaryEmissionNoiseDesaturation: 0
+    - _Secondaryemission: 1
+    - _SecondarytexDesaturation: 0
+    - _Smoothness: 0.09
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Tintinsidecolor: 1
+    - _UVSec: 0
+    - _Wave1amplitude: 0.069
+    - _Wave1frequency: 25.1
+    - _Wave1offset: 0
+    - _Wave2Frequency: 11.9
+    - _Wave2amplitude: 0.075
+    - _Wave2offset: 0
+    - _Weirdnoise: 0
+    - _Worldcoordinates: 0
+    - _ZWrite: 1
+    - __dirty: 0
+    m_Colors:
+    - _Basecolor: {r: 0, g: 0, b: 0, a: 1}
+    - _Basetexspeed: {r: 0, g: 0, b: 0, a: 0}
+    - _Basetextiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Bordercolor: {r: 1.65, g: 0.8741987, b: 0.1698529, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Direction: {r: 0, g: 1, b: 0, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Emissiontexspeed: {r: 0, g: 0, b: 0, a: 0}
+    - _Emissiontextiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Fillcolor: {r: 0, g: 0.28432748, b: 0.35849997, a: 1}
+    - _Foamcolor: {r: 1, g: 0.9724137, b: 0, a: 1}
+    - _Foamtexspeed: {r: 0, g: 0, b: 0, a: 0}
+    - _Foamtextiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Fresnelcolor: {r: 1, g: 0.78580123, b: 0.64705884, a: 1}
+    - _Mainoffset: {r: 0, g: 0, b: 0, a: 0}
+    - _Maintiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Noisecolor: {r: 0.15045653, g: 0, b: 0.9485294, a: 1}
+    - _Noisespeed: {r: 0, g: -0.02, b: 0, a: 0}
+    - _Noisetexspeed: {r: 0, g: 0, b: 0, a: 0}
+    - _Noisetextiling: {r: 1, g: 1, b: 0, a: 0}
+    - _Rimlightcolor: {r: 1.707, g: 0, b: 0, a: 1}
+    - _Secondaryemissioncolor: {r: 0, g: 0.1544118, b: 0.045791082, a: 1}
+    - _Secondaryemissionspeed: {r: -0.1, g: 0, b: 0, a: 0}
+    - _Secondaryemissiontiling: {r: 2, g: 2, b: 0, a: 0}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
