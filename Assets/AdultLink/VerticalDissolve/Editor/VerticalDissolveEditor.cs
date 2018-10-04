@@ -12,7 +12,6 @@ public class VerticalDissolveEditor : ShaderGUI
 	private MaterialProperty _Fill = null;
 	private MaterialProperty _Invert = null;
 	private MaterialProperty _Worldcoordinates = null;
-	private MaterialProperty _Layernoise = null;
 	private MaterialProperty _Tintinsidecolor = null;
 	private MaterialProperty _Fillcolor = null;
 
@@ -21,6 +20,7 @@ public class VerticalDissolveEditor : ShaderGUI
 	private MaterialProperty _Bordercolor = null;
 	private MaterialProperty _Bordernoisescale = null;
 	private MaterialProperty _Bordernoisespeed = null;
+	private MaterialProperty _Layernoise = null;
 	private MaterialProperty _Wave1_amplitude = null;
 	private MaterialProperty _Wave1_frequency = null;
 	private MaterialProperty _Wave1_offset = null;
@@ -88,7 +88,6 @@ public class VerticalDissolveEditor : ShaderGUI
 		_Fill = FindProperty("_Fill", _properties);
 		_Invert = FindProperty("_Invertmask", _properties);
 		_Worldcoordinates = FindProperty("_Worldcoordinates", _properties);
-		_Layernoise = FindProperty("_Layernoise", _properties);
 		_Tintinsidecolor = FindProperty("_Tintinsidecolor", _properties);
 		_Fillcolor = FindProperty("_Fillcolor", _properties);
 
@@ -98,6 +97,7 @@ public class VerticalDissolveEditor : ShaderGUI
 		_Bordercolor = FindProperty("_Bordercolor", _properties);
 		_Bordernoisescale = FindProperty("_Noisescale", _properties);
 		_Bordernoisespeed = FindProperty("_Noisespeed", _properties);
+		_Layernoise = FindProperty("_Layernoise", _properties);
 		_Wave1_amplitude = FindProperty("_Wave1amplitude", _properties);
 		_Wave1_frequency = FindProperty("_Wave1frequency", _properties);
 		_Wave1_offset = FindProperty("_Wave1offset", _properties);
@@ -218,7 +218,6 @@ public class VerticalDissolveEditor : ShaderGUI
 		_materialEditor.ShaderProperty(_Fill, "Fill amount");
 		_materialEditor.ShaderProperty(_Invert, "Invert");
 		_materialEditor.ShaderProperty(_Worldcoordinates, "Use world coords");
-		_materialEditor.ShaderProperty(_Layernoise, "Layer noise");
 		_materialEditor.ShaderProperty(_Tintinsidecolor, "Tint inside");
 		_materialEditor.ShaderProperty(_Fillcolor, "Tint color");
 	}
@@ -230,6 +229,7 @@ public class VerticalDissolveEditor : ShaderGUI
 		_materialEditor.ShaderProperty(_Borderwidth, "Width");
 		_materialEditor.ShaderProperty(_Bordernoisescale, "Noise scale");
 		_materialEditor.ShaderProperty(_Bordernoisespeed, "Noise speed");
+		_materialEditor.ShaderProperty(_Layernoise, "Layer noise");
 		_materialEditor.TexturePropertySingleLine(new GUIContent("Texture"), _Bordertexture);
 
 		startFoldout();
