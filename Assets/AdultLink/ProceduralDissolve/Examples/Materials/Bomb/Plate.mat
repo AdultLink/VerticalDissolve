@@ -113,7 +113,7 @@ Material:
     m_Floats:
     - _Activateemission: 1
     - _Activatenemissionstuff: 1
-    - _Activatesecondaryemission: 1
+    - _Activatesecondaryemission: 0
     - _Baseopacity: 1
     - _BasetexDesaturation: 1
     - _Borderwidth: 0.58
@@ -147,11 +147,11 @@ Material:
     - _SecondaryEmissionNoiseDesaturation: 0
     - _Secondaryemission: 1
     - _SecondarytexDesaturation: 0
-    - _Smoothness: 0.406
+    - _Smoothness: 0.4
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Tintinsidecolor: 1
+    - _Tintinsidecolor: 0
     - _UVSec: 0
     - _Wave1amplitude: 0.069
     - _Wave1frequency: 25.1
